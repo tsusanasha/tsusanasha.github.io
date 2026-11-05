@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>红果短剧创作者-短剧创作者入驻_红果短剧创作平台_创作者收益与作品发布</title>
+<meta name="description" content="红果短剧创作者首页，了解短剧创作者入驻流程、作品发布、内容规范与收益说明，帮助创作者在红果短剧平台开始创作与运营。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23e2372e'/%3E%3Cpath d='M20 18h24v6H26v6h14v6H26v6h18v6H20z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root{
+  --red:#e2372e;
+  --red-deep:#b32a22;
+  --ink:#1c1a19;
+  --ink-2:#4a4543;
+  --ink-3:#7b7571;
+  --line:#e8e2de;
+  --bg:#fdfbf9;
+  --cream:#fbf3ee;
+  --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+.wrap{width:min(1120px,92vw);margin:0 auto}
+
+/* Header */
+header{
+  position:sticky;top:0;z-index:50;background:rgba(253,251,249,.92);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;letter-spacing:.2px;color:var(--ink)}
+.brand .mark{width:34px;height:34px;border-radius:10px;background:var(--red);display:grid;place-items:center;flex:none}
+.brand .mark svg{width:20px;height:20px}
+.navlinks{display:flex;align-items:center;gap:26px;font-size:15px;color:var(--ink-2)}
+.navlinks a{padding:4px 0;border-bottom:2px solid transparent;transition:.2s}
+.navlinks a:hover{color:var(--red);border-bottom-color:var(--red)}
+.nav-cta{display:inline-flex;align-items:center;gap:6px;background:var(--red);color:#fff;font-size:14px;font-weight:600;padding:9px 18px;border-radius:999px;transition:.2s}
+.nav-cta:hover{background:var(--red-deep)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:10px;padding:7px 10px;cursor:pointer}
+.burger span{display:block;width:20px;height:2px;background:var(--ink);margin:4px 0}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;padding:64px 0 56px;background:linear-gradient(160deg,#fff6f2 0%,#fdfbf9 58%,#fbf7f4 100%)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--red-deep);background:#fce9e6;border:1px solid #f6d3ce;padding:5px 13px;border-radius:999px;margin-bottom:20px}
+h1{font-size:clamp(30px,4.4vw,48px);line-height:1.22;font-weight:800;letter-spacing:-.5px}
+.hero .lead{margin-top:20px;font-size:16.5px;color:var(--ink-2);max-width:34em}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:15px;font-weight:600;padding:13px 26px;border-radius:999px;transition:.2s;border:1px solid transparent}
+.btn-primary{background:var(--red);color:#fff;box-shadow:0 8px 20px -8px rgba(226,55,46,.6)}
+.btn-primary:hover{background:var(--red-deep)}
+.btn-ghost{background:#fff;border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--red);color:var(--red)}
+.btn[aria-disabled="true"]{opacity:.85;cursor:default}
+.hero-stats{display:flex;gap:34px;margin-top:38px;flex-wrap:wrap}
+.stat b{display:block;font-size:24px;font-weight:800;color:var(--ink);line-height:1.2}
+.stat span{font-size:13px;color:var(--ink-3)}
+.hero-art{position:relative}
+.hero-art .card-frame{
+  background:#fff;border:1px solid var(--line);border-radius:24px;padding:18px;
+  box-shadow:0 30px 60px -34px rgba(120,60,40,.35);transform:rotate(-1.2deg);
+}
+.hero-art .card-frame svg{width:100%;height:auto;border-radius:14px}
+.hero-art .tag{
+  position:absolute;right:-6px;bottom:18px;background:#fff;border:1px solid var(--line);
+  border-radius:12px;padding:10px 15px;font-size:13px;font-weight:600;color:var(--ink-2);
+  box-shadow:0 12px 26px -16px rgba(0,0,0,.3);
+}
+.hero-art .tag b{color:var(--red);font-size:15px}
+
+/* Section base */
+section{padding:64px 0}
+.sec-head{max-width:640px;margin-bottom:36px}
+.sec-kicker{font-size:13px;font-weight:700;letter-spacing:1.5px;color:var(--red);text-transform:uppercase;margin-bottom:10px}
+h2{font-size:clamp(23px,2.6vw,30px);font-weight:800;line-height:1.3;letter-spacing:-.3px}
+.sec-head p{margin-top:12px;color:var(--ink-2);font-size:15.5px}
+
+/* Steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px 20px;position:relative;transition:.25s}
+.step:hover{border-color:#f3c4be;transform:translateY(-3px);box-shadow:0 18px 34px -26px rgba(226,55,46,.5)}
+.step .num{font-size:12px;font-weight:800;color:var(--red);letter-spacing:1px}
+.step h3{font-size:16.5px;margin:10px 0 8px;font-weight:700}
+.step p{font-size:14px;color:var(--ink-2)}
+
+/* Feature list */
+.split{display:grid;grid-template-columns:.95fr 1.05fr;gap:52px;align-items:center}
+.feature-item{display:flex;gap:16px;padding:18px 0;border-bottom:1px dashed var(--line)}
+.feature-item:last-child{border-bottom:none}
+.feature-item .ico{width:42px;height:42px;flex:none;border-radius:12px;background:#fce9e6;display:grid;place-items:center}
+.feature-item .ico svg{width:22px;height:22px;stroke:var(--red);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.feature-item h3{font-size:16px;font-weight:700;margin-bottom:4px}
+.feature-item p{font-size:14px;color:var(--ink-2)}
+.visual-box{background:var(--cream);border-radius:22px;padding:26px;border:1px solid #f2e5dd}
+.visual-box svg{width:100%;height:auto}
+
+/* Content cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:.25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 22px 44px -30px rgba(60,40,30,.45);border-color:#e6d6ce}
+.card .thumb{height:132px;background:var(--cream);position:relative;overflow:hidden}
+.card .thumb svg{position:absolute;inset:0;width:100%;height:100%}
+.card .body{padding:20px;display:flex;flex-direction:column;gap:9px;flex:1}
+.card .badge{align-self:flex-start;font-size:12px;font-weight:700;color:var(--red-deep);background:#fce9e6;padding:3px 10px;border-radius:999px}
+.card h3{font-size:16.5px;font-weight:700;line-height:1.45}
+.card p{font-size:14px;color:var(--ink-2);flex:1}
+.card .more{font-size:14px;font-weight:600;color:var(--red);margin-top:4px}
+
+/* FAQ */
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.qa{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px}
+.qa h3{font-size:15.5px;font-weight:700;margin-bottom:8px;display:flex;gap:9px}
+.qa h3::before{content:"Q";color:var(--red);font-weight:800}
+.qa p{font-size:14px;color:var(--ink-2)}
+
+/* CTA band */
+.band{background:linear-gradient(120deg,#1c1a19,#3a2420);color:#fff;border-radius:24px;padding:48px 40px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.band h2{color:#fff;max-width:20em}
+.band p{color:rgba(255,255,255,.72);font-size:15px;margin-top:10px}
+.band .btn-primary{box-shadow:none}
+
+/* Footer */
+footer{border-top:1px solid var(--line);padding:44px 0 34px;background:#fff}
+.foot-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.foot-brand{max-width:320px}
+.foot-brand .brand{margin-bottom:12px}
+.foot-brand p{font-size:14px;color:var(--ink-3)}
+.foot-links{display:flex;gap:64px;flex-wrap:wrap}
+.foot-col h4{font-size:14px;font-weight:700;margin-bottom:12px}
+.foot-col a{display:block;font-size:14px;color:var(--ink-2);padding:4px 0}
+.foot-col a:hover{color:var(--red)}
+.foot-bottom{margin-top:32px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--ink-3);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media(max-width:920px){
+  .hero-grid,.split{grid-template-columns:1fr;gap:36px}
+  .hero-art{max-width:440px}
+  .steps{grid-template-columns:1fr 1fr}
+  .cards{grid-template-columns:1fr 1fr}
+  .faq{grid-template-columns:1fr}
+}
+@media(max-width:680px){
+  .navlinks{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:0;padding:8px 6vw 16px}
+  .navlinks.open{display:flex}
+  .navlinks a{width:100%;padding:11px 0;border-bottom:1px solid var(--line)}
+  .burger{display:block}
+  .nav-cta{display:none}
+  .hero{padding:44px 0 40px}
+  .hero-stats{gap:22px}
+  .steps,.cards{grid-template-columns:1fr}
+  section{padding:48px 0}
+  .band{padding:34px 24px}
+  .foot-links{gap:36px}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M7 5h11v3h-8v3h6v3h-6v3h8v3H7z" fill="#fff"/></svg>
+      </span>
+      红果短剧创作者
+    </a>
+    <nav class="navlinks" id="navlinks" aria-label="主导航">
+      <a href="#start">入驻流程</a>
+      <a href="#ability">创作能力</a>
+      <a href="#guide">创作指南</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <a class="nav-cta" href="#start">开始入驻</a>
+    <button class="burger" id="burger" aria-label="展开导航" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">短剧创作 · 内容发布 · 收益成长</span>
+        <h1>红果短剧创作者</h1>
+        <p class="lead">这里是红果短剧创作者的起点页面。围绕创作者入驻、作品发布与内容运营，我们把常用入口和规则说明集中在一起，方便新加入的创作者快速上手，也方便已有账号的创作者回看创作要求。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#start">进入创作者入驻</a>
+          <a class="btn btn-ghost" href="#guide">查看创作指南</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><b>4 步</b><span>入驻主流程</span></div>
+          <div class="stat"><b>3 类</b><span>内容规范要点</span></div>
+          <div class="stat"><b>持续</b><span>创作成长路径</span></div>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="card-frame">
+          <svg viewBox="0 0 420 300" role="img" aria-label="短剧创作场景示意图">
+            <defs>
+              <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#ffe2d9"/><stop offset="1" stop-color="#fdfbf9"/>
+              </linearGradient>
+            </defs>
+            <rect width="420" height="300" rx="14" fill="url(#g1)"/>
+            <rect x="34" y="40" width="150" height="220" rx="12" fill="#fff" stroke="#f0d6cc"/>
+            <rect x="52" y="60" width="114" height="64" rx="8" fill="#fce9e6"/>
+            <path d="M96 82v20l16-10z" fill="#e2372e"/>
+            <rect x="52" y="138" width="90" height="8" rx="4" fill="#efd9d1"/>
+            <rect x="52" y="156" width="114" height="8" rx="4" fill="#f5e6e0"/>
+            <rect x="52" y="174" width="72" height="8" rx="4" fill="#f5e6e0"/>
+            <rect x="52" y="204" width="114" height="34" rx="8" fill="#e2372e"/>
+            <rect x="82" y="217" width="54" height="8" rx="4" fill="#fff"/>
+            <rect x="208" y="40" width="178" height="102" rx="12" fill="#fff" stroke="#f0d6cc"/>
+            <circle cx="236" cy="72" r="16" fill="#fce9e6"/>
+            <path d="M230 72l5 5 8-9" stroke="#e2372e" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="262" y="62" width="96" height="8" rx="4" fill="#efd9d1"/>
+            <rect x="262" y="80" width="72" height="8" rx="4" fill="#f5e6e0"/>
+            <rect x="222" y="106" width="146" height="8" rx="4" fill="#f5e6e0"/>
+            <rect x="208" y="158" width="178" height="102" rx="12" fill="#fff" stroke="#f0d6cc"/>
+            <rect x="226" y="176" width="60" height="60" rx="8" fill="#fce9e6"/>
+            <path d="M246 196v20l15-10z" fill="#e2372e"/>
+            <rect x="298" y="180" width="70" height="8" rx="4" fill="#efd9d1"/>
+            <rect x="298" y="198" width="52" height="8" rx="4" fill="#f5e6e0"/>
+            <rect x="298" y="216" width="70" height="8" rx="4" fill="#f5e6e0"/>
+            <rect x="226" y="244" width="142" height="6" rx="3" fill="#f0d6cc"/>
+          </svg>
+        </div>
+        <span class="tag">内容规范 <b>先看再发</b></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 入驻流程 -->
+  <section id="start">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">入驻流程</div>
+        <h2>红果短剧创作者从注册到发布的主路径</h2>
+        <p>入驻不需要绕远路。下面四步是多数创作者会走的主要环节，按顺序推进即可，遇到规则细节可以对照后文的创作指南。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="num">STEP 01</div>
+          <h3>注册账号</h3>
+          <p>使用常用手机号完成账号注册，并按提示完成实名信息核验，用于后续身份确认。</p>
+        </div>
+        <div class="step">
+          <div class="num">STEP 02</div>
+          <h3>提交创作资料</h3>
+          <p>在创作者入口补充创作者名称、擅长题材与作品说明，便于平台识别内容方向。</p>
+        </div>
+        <div class="step">
+          <div class="num">STEP 03</div>
+          <h3>上传作品</h3>
+          <p>按发布要求提交竖屏短剧成片，填写剧名、简介、分集信息等基础字段。</p>
+        </div>
+        <div class="step">
+          <div class="num">STEP 04</div>
+          <h3>内容审核</h3>
+          <p>作品进入审核环节，审核通过后即可在平台展示，并进入后续运营阶段。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作能力 -->
+  <section id="ability">
+    <div class="wrap split">
+      <div>
+        <div class="sec-kicker">创作能力</div>
+        <h2>为红果短剧创作者准备的基础能力</h2>
+        <p style="color:var(--ink-2);font-size:15.5px;margin-top:12px">围绕“创作—发布—运营”这条线，页面把创作者最常打交道的几个环节讲清楚，减少反复查找规则的时间。</p>
+      </div>
+      <div>
+        <div class="feature-item">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>
+          <div><h3>作品发布管理</h3><p>统一管理已发布与待发布作品，维护剧集信息与分集顺序，便于持续更新。</p></div>
+        </div>
+        <div class="feature-item">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19V5m0 14h16M8 15l4-4 3 3 5-6"/></svg></span>
+          <div><h3>数据回看</h3><p>查看作品的基础播放与互动数据，作为调整题材和节奏的参考依据。</p></div>
+        </div>
+        <div class="feature-item">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8z"/></svg></span>
+          <div><h3>内容规范指引</h3><p>常见违规点与画面、台词、封面要求集中说明，帮助作品更顺利地通过审核。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作指南 -->
+  <section id="guide" style="background:linear-gradient(180deg,#fdfbf9,#fbf5f1)">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">创作指南</div>
+        <h2>红果短剧创作者常看的三个方向</h2>
+        <p>短剧的完成度往往取决于开篇、节奏和合规三件事。以下内容按使用顺序展开，可作为创作前的自查清单。</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="thumb">
+            <svg viewBox="0 0 320 132" aria-hidden="true">
+              <rect width="320" height="132" fill="#fce9e6"/>
+              <rect x="28" y="30" width="86" height="72" rx="10" fill="#fff"/>
+              <path d="M58 56v20l16-10z" fill="#e2372e"/>
+              <rect x="130" y="42" width="150" height="9" rx="4" fill="#f0d6cc"/>
+              <rect x="130" y="62" width="110" height="9" rx="4" fill="#f7e5df"/>
+              <rect x="130" y="82" width="150" height="9" rx="4" fill="#f7e5df"/>
+            </svg>
+          </div>
+          <div class="body">
+            <span class="badge">开篇</span>
+            <h3>前三集要给出清晰冲突</h3>
+            <p>短剧的观看决策集中在开头。让主角目标、阻力和悬念尽早出现，避免长时间铺垫背景。</p>
+            <span class="more">阅读要点 →</span>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb">
+            <svg viewBox="0 0 320 132" aria-hidden="true">
+              <rect width="320" height="132" fill="#fbf3ee"/>
+              <rect x="30" y="34" width="120" height="10" rx="5" fill="#f0d6cc"/>
+              <rect x="30" y="56" width="90" height="10" rx="5" fill="#f7e5df"/>
+              <rect x="180" y="34" width="110" height="64" rx="10" fill="#fff" stroke="#f0d6cc"/>
+              <path d="M206 66l10-12 8 9 10-14 12 17" stroke="#e2372e" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="body">
+            <span class="badge">节奏</span>
+            <h3>每集收尾留一个推进点</h3>
+            <p>控制单集时长与信息密度，结尾保留悬念或反转，帮助观众自然进入下一集。</p>
+            <span class="more">阅读要点 →</span>
+          </div>
+        </article>
+        <article class="card">
+          <div class="thumb">
+            <svg viewBox="0 0 320 132" aria-hidden="true">
+              <rect width="320" height="132" fill="#fce9e6"/>
+              <circle cx="72" cy="66" r="28" fill="#fff"/>
+              <path d="M62 66l7 7 13-15" stroke="#e2372e" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="122" y="46" width="160" height="10" rx="5" fill="#f0d6cc"/>
+              <rect x="122" y="68" width="120" height="10" rx="5" fill="#f7e5df"/>
+              <rect x="122" y="90" width="160" height="10" rx="5" fill="#f7e5df"/>
+            </svg>
+          </div>
+          <div class="body">
+            <span class="badge">合规</span>
+            <h3>发布前做一遍内容自查</h3>
+            <p>检查封面、台词与标题是否清楚表达内容，避免夸大表述与不符合规范的情节呈现。</p>
+            <span class="more">阅读要点 →</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">常见问题</div>
+        <h2>红果短剧创作者入驻前会问的事</h2>
+        <p>以下回答整理自创作者入口常见的咨询方向，具体规则以平台最新页面为准。</p>
+      </div>
+      <div class="faq">
+        <div class="qa">
+          <h3>入驻需要准备什么？</h3>
+          <p>通常需要可用的手机号、实名信息，以及用于说明创作方向的资料。若已有成片，可提前准备剧集简介与分集信息。</p>
+        </div>
+        <div class="qa">
+          <h3>作品审核大概看哪些方面？</h3>
+          <p>主要关注内容是否完整、画面与台词是否符合规范、标题封面是否与实际内容一致，以及对观众是否友好。</p>
+        </div>
+        <div class="qa">
+          <h3>可以用横屏作品发布吗？</h3>
+          <p>短剧以竖屏观看为主，建议按竖屏比例拍摄与剪辑。具体画幅与时长要求，请以发布页面的提示为准。</p>
+        </div>
+        <div class="qa">
+          <h3>收益与结算在哪里了解？</h3>
+          <p>收益规则与结算说明会在创作者后台对应页面展示。建议先完成入驻并阅读规则，再进行作品规划。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA band -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="band">
+        <div>
+          <h2>把第一步走稳，再谈作品成长</h2>
+          <p>红果短剧创作者的入驻与发布路径并不复杂。先完成账号与资料，再按规范发布作品，后续的运营与调整才有依据。</p>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn btn-primary" href="#start">开始入驻</a>
+          <a class="btn btn-ghost" href="#guide" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.35)">查看创作指南</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="#top">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M7 5h11v3h-8v3h6v3h-6v3h8v3H7z" fill="#fff"/></svg>
+          </span>
+          红果短剧创作者
+        </a>
+        <p>面向短剧创作者的入驻与创作信息页面，集中说明入驻流程、发布要求与内容规范，帮助创作者少走弯路。</p>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <h4>创作入口</h4>
+          <a href="#start">创作者入驻</a>
+          <a href="#ability">作品发布</a>
+          <a href="#guide">创作指南</a>
+        </div>
+        <div class="foot-col">
+          <h4>帮助信息</h4>
+          <a href="#faq">常见问题</a>
+          <a href="#guide">内容规范</a>
+          <a href="#start">审核流程</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>红果短剧创作者 · 创作信息页</span>
+      <span>规则与流程以平台最新页面为准</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var btn = document.getElementById('burger');
+    var links = document.getElementById('navlinks');
+    if(!btn || !links) return;
+    btn.addEventListener('click', function(){
+      var open = links.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    links.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        links.classList.remove('open');
+        btn.setAttribute('aria-expanded','false');
+      }
+    });
+  })();
+</script>
+</body>
+</html>
